@@ -1,5 +1,8 @@
 import { makeAutoObservable } from 'mobx'
-import Pizza1 from "../img/Rectangle 4.png"
+import Pizza1 from "../img/Pizza1.png"
+import Pizza2 from "../img/Pizza2.png"
+import Pizza3 from "../img/Pizza3.png"
+import Pizza4 from "../img/Pizza4.png"
 
 type TypeProducts = Array<IGrup>
 
@@ -29,15 +32,21 @@ class Poducts {
                 },
                 {
                     name:"Цезарь",
-                    img:Pizza1,
+                    img:Pizza2,
                     price:570,
                     structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
                 },
                 {
                     name:"Римская",
-                    img:Pizza1,
+                    img:Pizza3,
                     price:570,
                     structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
+                },
+                {
+                    name:"Грушевая",
+                    img:Pizza4,
+                    price:570,
+                    structure:["Груша","Ананас" , "Крем", "Сыр Моцарелла", "Сливки", "Чеснок"]
                 },
             ]
         }
