@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx'
-import Pizza1 from "./Rectangle 4.png"
+import Pizza1 from "../img/Rectangle 4.png"
 
 type TypeProducts = Array<IGrup>
 
@@ -8,7 +8,7 @@ interface IGrup {
     items: Array<IItem>
 }
 
-interface IItem {
+export interface IItem {
     name: string,
     price: number,
     img: any,
@@ -26,7 +26,19 @@ class Poducts {
                     img:Pizza1,
                     price:570,
                     structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
-                }
+                },
+                {
+                    name:"Цезарь",
+                    img:Pizza1,
+                    price:570,
+                    structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
+                },
+                {
+                    name:"Римская",
+                    img:Pizza1,
+                    price:570,
+                    structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
+                },
             ]
         }
     ]

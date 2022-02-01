@@ -2,7 +2,7 @@ import { observer } from 'mobx-react-lite';
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import { Basket, Container, Header, Nav, NavItem, Wrapper } from './app-style';
-import products from './pizzaStore'
+import products, { IItem } from './mobX/pizzaStore'
 
 const MainPage: FC = observer(() => {
   return (<>
@@ -31,13 +31,15 @@ const MainPage: FC = observer(() => {
       <div>фильтры</div>
     </Nav>
     {
-      products.products.map((el)=>(<>div</>))
+      products.products.map((el) => (<>div</>))
     }
   </>)
 })
 
-
-
+const Item: FC<IItem> = ({ img, name, price, structure }) => {
+  return (<>
+  </>)
+}
 
 function App() {
   return (<Wrapper>
