@@ -19,7 +19,6 @@ export interface IItem {
 }
 
 class Poducts {
-
     products:TypeProducts = [
         {
             name:"Pizza",
@@ -28,7 +27,7 @@ class Poducts {
                     name:"Чикен Сладкий Чили",
                     img:Pizza1,
                     price:570,
-                    structure:["Курица","Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
+                    structure:["Курица", "Лук" , "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
                 },
                 {
                     name:"Цезарь",

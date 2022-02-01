@@ -4,7 +4,31 @@ import { Route, Routes } from 'react-router-dom'
 import { Basket, Container, Header, Nav, NavItem, Wrapper } from './app-style';
 import products, { IItem } from './mobX/pizzaStore'
 
+
+
+
+
+
+const Item: FC<IItem> = ({ img, name, price, structure }) => {
+  return (<div>
+    <img src={img} />
+    <div>{name}</div>
+    <div>{structure.join(",")}</div>
+    <Nav>
+      <button>Выбрать</button>
+      <button>от{price}</button>
+    </Nav>
+  </div>)
+}
+
+
+
+
+
+
+
 const MainPage: FC = observer(() => {
+  
   return (<>
     <Nav>
       <div>Акции</div>
@@ -31,15 +55,18 @@ const MainPage: FC = observer(() => {
       <div>фильтры</div>
     </Nav>
     {
-      products.products.map((el) => (<>div</>))
+      
+      // products.products.map( (el) => el.items.map((it)=>(<Item {...it}/>)) )
+      products.products.map( grup =>(<>
+      <h1>{grup.name}</h1>
+      {
+        grup.items.map( item => <Item {...item} />)
+      }
+      </>))
+
     }
   </>)
 })
-
-const Item: FC<IItem> = ({ img, name, price, structure }) => {
-  return (<>
-  </>)
-}
 
 function App() {
   return (<Wrapper>
