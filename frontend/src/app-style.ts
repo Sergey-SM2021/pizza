@@ -1,10 +1,8 @@
 import styled from "styled-components"
+import { Button as GlobalButton } from "./components/globalStyle/style"
 
-export const Basket = styled.button`
-background: #FF7010;
-border-radius: 3px;
-border: none;
-color: #ffffff;
+export const Button = styled(GlobalButton)`
+margin-left: 10px;
 `
 
 export const Container = styled.div`
@@ -17,6 +15,7 @@ background: #fff;
 `
 
 export const Nav = styled.div`
+align-items: center;
 display:flex ;
 justify-content: space-between;
 `

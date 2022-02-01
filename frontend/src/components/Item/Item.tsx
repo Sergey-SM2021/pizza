@@ -6,7 +6,7 @@ import { IItem } from "../../mobX/Models/StoreModel"
 const Item: FC<IItem> = ({ img, name, price, structure }) => {
     return (<div>
       <img src={img} />
-      <div>{name}</div>
+      <h3>{name}</h3>
       <div>{structure.join(",")}</div>
       <Nav>
         <button>Выбрать</button>
