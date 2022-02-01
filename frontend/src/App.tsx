@@ -1,72 +1,7 @@
-import { observer } from 'mobx-react-lite';
-import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom'
-import { Basket, Container, Header, Nav, NavItem, Wrapper } from './app-style';
-import products, { IItem } from './mobX/pizzaStore'
 
-
-
-
-
-
-const Item: FC<IItem> = ({ img, name, price, structure }) => {
-  return (<div>
-    <img src={img} />
-    <div>{name}</div>
-    <div>{structure.join(",")}</div>
-    <Nav>
-      <button>Выбрать</button>
-      <button>от{price}</button>
-    </Nav>
-  </div>)
-}
-
-
-
-
-
-
-
-const MainPage: FC = observer(() => {
-  
-  return (<>
-    <Nav>
-      <div>Акции</div>
-      <div>Пицца</div>
-      <div>Суши</div>
-      <div>Напитки</div>
-      <div>Закуски</div>
-      <div>Комбо</div>
-      <div>Десерты</div>
-      <div>Соусы</div>
-    </Nav>
-    <Nav>
-      <div>3 средние пиццы
-        от 999 рублей</div>
-      <div>Кэшбек 10% на самовывоз (доставка)</div>
-      <div>3 средние пиццы
-        от 999 рублей</div>
-      <div>Кэшбек 10% на самовывоз (доставка)</div>
-    </Nav>
-    {/* <Search></Search> */}
-    <input type="text" />
-    <Nav>
-      <div>Пицца</div>
-      <div>фильтры</div>
-    </Nav>
-    {
-      
-      // products.products.map( (el) => el.items.map((it)=>(<Item {...it}/>)) )
-      products.products.map( grup =>(<>
-      <h1>{grup.name}</h1>
-      {
-        grup.items.map( item => <Item {...item} />)
-      }
-      </>))
-
-    }
-  </>)
-})
+import { Basket, Container, Header, Nav, NavItem, Wrapper } from './app-style'
+import MainPage from './components/MainPage/MainPage'
 
 function App() {
   return (<Wrapper>
@@ -99,4 +34,4 @@ function App() {
   </Wrapper>)
 }
 
-export default App;
+export default App

@@ -1,22 +1,10 @@
 import { makeAutoObservable } from 'mobx'
+
 import Pizza1 from "../img/Pizza1.png"
 import Pizza2 from "../img/Pizza2.png"
 import Pizza3 from "../img/Pizza3.png"
 import Pizza4 from "../img/Pizza4.png"
-
-type TypeProducts = Array<IGrup>
-
-interface IGrup {
-    name: string,
-    items: Array<IItem>
-}
-
-export interface IItem {
-    name: string,
-    price: number,
-    img: any,
-    structure: Array<string>,
-}
+import { TypeProducts } from './Models/StoreModel'
 
 class Poducts {
     products:TypeProducts = [
