@@ -1,8 +1,8 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
 
-import { Container, Header, Nav, NavItem } from '../../app-style'
-import Basket from '../../Busket'
-import Items from '../Navigate/Nav'
+import { Container, Header, Nav, NavItem } from '../app-style'
+import Basket from '../../../Busket'
+import Items from '../../Navigate/Nav'
 
 const Head = () => {
     return (<Routes>

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Button as GlobalButton } from "./components/globalStyle/style"
+import { Button as GlobalButton } from "../globalStyle/style"
 
 export const Button = styled(GlobalButton)`
 margin-left: 10px;
