@@ -1,56 +1,26 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
-import { Container, Header, Nav, NavItem, Wrapper } from './app-style'
-import Basket from './Busket'
+import { Container, Wrapper } from './app-style'
 import CategoryPage from './components/CategoryPage/CategoryPage'
+import Head from './components/Header/Header'
 import MainPage from './components/MainPage/MainPage'
-import Items from './components/Navigate/Nav'
+import Popup from './components/PopItem/PopItem'
 
-function App() {
-  return (<Wrapper>
-
+const Content = () => {
+  return (<Container>
     <Routes>
-      <Route path='*' element={
-        <Header>
-          <Container>
-            <Nav>
-              <NavLink to={"/"}>Куда пицца</NavLink>
-              <Items />
-              <Basket />
-            </Nav>
-          </Container>
-        </Header>
-      } />
-      <Route path='/' element={
-        <Header>
-          <Container>
-            <Nav>
-              <Nav>
-                <NavItem firsItem={true}>Москва</NavItem>
-                <NavItem>Проверить адресс</NavItem>
-                <NavItem>Среднее время доставки</NavItem>
-              </Nav>
-              <Nav>
-                <NavItem>Время работы: с 11:00 до 23:00</NavItem>
-                <NavItem>Войти в аккаунт</NavItem>
-              </Nav>
-            </Nav>
-          </Container>
-          <Container><Nav>
-            <div>Куда пицца</div>
-            <Basket />
-          </Nav></Container>
-        </Header>
-      } />
+      <Route path="*" element={<MainPage />} />
+      <Route path="category/:name" element={<CategoryPage />} />
     </Routes>
-
-    <Container>
-      <Routes>
-        <Route path="*" element={<MainPage />} />
-        <Route path="category/:name" element={<CategoryPage />} />
-      </Routes>
-    </Container>
-  </Wrapper>)
+  </Container>)
 }
+
+const App = () => (<>
+  <Wrapper>
+    <Head />
+    <Content />
+    <Popup/>
+  </Wrapper>
+</>)
 
 export default App
