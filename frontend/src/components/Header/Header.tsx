@@ -6,17 +6,20 @@ import Items from '../Navigate/Nav'
 
 const Head = () => {
     return (<Routes>
+
         <Route path='*' element={
             <Header>
                 <Container>
                     <Nav>
                         <NavLink to={"/"}>Куда пицца</NavLink>
                         <Items />
+                        <div>Другое</div>
                         <Basket />
                     </Nav>
                 </Container>
             </Header>
         } />
+
         <Route path='/' element={
             <Header>
                 <Container>
@@ -38,6 +41,7 @@ const Head = () => {
                 </Nav></Container>
             </Header>
         } />
+
     </Routes>)
 }
 
