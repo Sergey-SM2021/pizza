@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite"
 import popStore from "../../mobX/popStore"
 import { Button } from "../globalStyle/style"
-import { Pop, Modal, Title, Half, P, SpaceBetween, LinkButton } from "./Styled"
+import { Pop, Modal, Title, Half, P, SpaceBetween, Price } from "./Styled"
 import basketStore from '../../mobX/basketStore'
 
 const Popup = () => (<>
@@ -18,8 +18,8 @@ const Popup = () => (<>
                         <Button default>33</Button>
                     </SpaceBetween>
                     <SpaceBetween>
-                        <LinkButton>Итого: 379$</LinkButton>
-                        <Button onClick={()=>{basketStore.add(popStore.item)}}>Добавить</Button>
+                        <Price>Итого: {popStore.price}$</Price>
+                        <Button onClick={() => { basketStore.add(popStore.item) }}>Добавить</Button>
                     </SpaceBetween>
                 </Half>
             </Modal>

@@ -10,4 +10,9 @@ export interface IItem {
     price: number,
     img: any,
     structure: Array<string>,
+    id:number
+}
+
+export interface ItemStored extends IItem{
+    count: number
 }

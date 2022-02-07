@@ -12,6 +12,7 @@ export const Modal = styled.div`
 `
 
 export const Pop = styled.div`
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,13 +23,14 @@ export const Pop = styled.div`
     left: 0px;
     background: #0000008b;
     backdrop-filter: blur(8px);
+    overflow: hidden;
 `
 
 export const Title = styled.h3`
     width: 100%;
     display: flex;
     justify-content: center;
-` 
+`
 
 export const Half = styled.div`
     width: 100%;
@@ -46,8 +48,8 @@ export const SpaceBetween = styled.div`
     margin-bottom: 10px;
 `
 
-export const LinkButton = styled.div`
-    display: inline-block;
-    color: #FF7010;
-    background: #fff;
+export const Price = styled.div`
+display: inline-block;
+color: #FF7010;
+background: #fff;
 `

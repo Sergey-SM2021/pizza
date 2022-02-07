@@ -4,6 +4,9 @@ import Sushi2 from "../img/sushi2.png"
 
 class Pop {
 
+    get price() {
+        return this.item.price
+    }
     item: IItem = {
         img: Sushi2,
         name: "cc",
