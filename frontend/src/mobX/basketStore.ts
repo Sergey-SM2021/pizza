@@ -22,7 +22,17 @@ class Basket {
             structure: ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соуc", "Чеснок", "Томатный соус"]
         },
     ]
-    price: number = 1983
+
+    get price() {
+        return (this.items.reduce((calculate, current) => {
+            return calculate + current.price
+        }, 0))
+    }
+
+    add = (Item: IItem) => {
+        this.items.push(Item)
+        console.log(this.items)
+    }
 }
 
 export default new Basket()
